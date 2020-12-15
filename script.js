@@ -1,46 +1,73 @@
-
-
+//A
 const addTheWordCool = function(array){
-    array.push("cool").toString();
+    array.push("cool");
+    return array;
 }
 
 console.log("Add cool:", addTheWordCool(["nice", "awesome", "tof"]));
 
 
 
-
-
-//
-/*
-let arrayAantal = ['appels', 'peren', 'citroenen'];
-
+//B
 const amountOfElementsInArray = function(array) {
-    console.log(array.length);
+    return array.length;
 }
 
-console.log(amountOfElementsInArray(arrayAantal));
+console.log(amountOfElementsInArray(["appels", "peren", "citroenen"]));
 
-//
 
-let arrayFirstRetour = ["Belgie", "Nederland", "Luxemburg"];
 
+//C
 const selectBelgiumFromBenelux = function(array) {
-    arrayFirstRetour[0];
+    return array[0];
 }
 
-console.log(selectBelgiumFromBenelux([arrayFirstRetour])); 
+console.log(selectBelgiumFromBenelux(["Belgie", "Nederland", "Luxemburg"])); 
 
 
 
 
-
-
-
-
-function myFunction() {
-    let ary=arrayFirstRetour[0];
+//D
+const lastElementInArray = function(array){
+    return array[array.length - 1];
 }
 
-console.log(myFunction[arrayFirstRetour]);
+console.log(lastElementInArray(["Haas", "Cavia", "Kip", "Schildpad"])); 
 
-*/
+
+//E
+const presidents = ["Trump", "Obama", "Bush", "Clinton"] 
+  
+const impeachTrumpSlice = function(array) {
+    return array.slice(1)
+}
+const impeachTrumpSplice = function(array) {
+    return array.splice(1)
+}
+
+console.log(impeachTrumpSlice(presidents)); // ["Obama", "Bush", "Clinton"]
+console.log(impeachTrumpSplice(presidents)); // ["Obama", "Bush", "Clinton"]
+
+//console.log(presidents);
+//slice removes the object from the array, splice makes a new array
+
+//slice makes a new array where the sliced is removed
+//splice removes the other 3 from the array and only trump remains
+
+
+//F
+const stringsTogether = function(array) {
+    return array.join(" ");
+}
+
+console.log(stringsTogether(['Winc', 'Academy', 'is', 'leuk', ';-}'])) 
+//resultaat: "Winc Academy is leuk ;-}"
+
+
+//G
+const combineArrays = function (array1, array2){
+    return array1.concat(array2);
+}
+
+console.log(combineArrays([1,2,3], [4,5,6])); 
+// resultaat: [1,2,3,4,5,6]
